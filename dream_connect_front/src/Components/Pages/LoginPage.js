@@ -1,5 +1,5 @@
-import React from "react';/forms/LoginForm";
-import LoginForm  from '..'
+import React from 'react';
+import LoginForm  from "./Components/Forms/LoginForm";
 
 const LoginPage = () => (
   <div>
