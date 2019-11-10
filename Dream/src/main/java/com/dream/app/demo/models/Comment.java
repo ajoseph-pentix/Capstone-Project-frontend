@@ -1,7 +1,6 @@
 package com.dream.app.demo.models;
 
 import java.util.Date;
-
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 
