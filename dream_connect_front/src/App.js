@@ -5,7 +5,7 @@ import HomePage from "./Components/Pages/HomePage";
 import LoginPage from "./Components/Pages/LoginPage";
 
 const App = () => (
-  <div className="ui container">
+  <div className="ui container"> //to add margins to page
     <Route path="/" exact component={HomePage} />
     <Route path="/login" exact component={LoginPage} />
     </div>

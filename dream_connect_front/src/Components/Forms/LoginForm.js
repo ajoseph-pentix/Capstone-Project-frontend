@@ -1,11 +1,12 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Form, Button } from 'semantic-ui-react';
 
 class LoginForm extends React.Component {
   state = {
-    data: {},
-      email: "",
-      password: ""
+    data: {
+      email: '',
+      password: ''
     },
     loading: false,
     errors: {}
@@ -13,12 +14,13 @@ class LoginForm extends React.Component {
 
   onChange = e =>
     this.setState({
-      data: { ...this.state.data}, [e.target.name]: e.target.value }
+      data: { ...this.state.data, [e.target.name]: e.target.value }
   });
 
   onSubmit = () => {
-
-}
+    this.props.submit(this.state.data); //call onSubmit function and pass data
+  }
+};
 
   render() {
 const {data} = this.state;
@@ -42,15 +44,18 @@ return (
     type="password"
     id="password"
     name="email"
-    placeholder="Something"
+    placeholder="password"
     value={data.password}
     onChange={this.onChange}
     />
   </Form.Field>
     <Button primary>Login</Button>
   </Form>
-);
-}
+    );
+  };
 
+LoginForm.propTypes = {
+  submit: PropTypes.func.isRequired
 
+};
 export default LoginForm;

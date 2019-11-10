@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import {BrowserRouter} from 'react-router-dom';
+import 'semantic-ui-css/semantic.min.css' //library that helps in creation of form components
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
