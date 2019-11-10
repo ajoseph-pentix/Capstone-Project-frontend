@@ -1,9 +1,9 @@
 import React from 'react';
-import {Form} from '';
+import { Form, Button } from 'semantic-ui-react';
 
 class LoginForm extends React.Component {
   state = {
-    data: {
+    data: {},
       email: "",
       password: ""
     },
@@ -12,12 +12,12 @@ class LoginForm extends React.Component {
   };
 
   onChange = e =>
-    this. setState({
-      data: {...this.state.data}, [e.target.name]: e.target.value}
+    this.setState({
+      data: { ...this.state.data}, [e.target.name]: e.target.value }
   });
 
   onSubmit = () => {
-  
+
 }
 
   render() {
@@ -31,7 +31,7 @@ return (
     type="email"
     id="email"
     name="email"
-    placeholder="example@example.com"
+    placeholder="Email"
     value={data.email}
     onChange={this.onChange}
     />
@@ -51,12 +51,6 @@ return (
   </Form>
 );
 }
-}
 
-
-      <div></div>
-    );
-  }
-}
 
 export default LoginForm;
