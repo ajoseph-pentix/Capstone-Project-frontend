@@ -3,15 +3,14 @@ package com.dream.app.demo.models;
 import java.util.Date;
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
-
 import org.hibernate.annotations.OnDelete;
 import org.hibernate.annotations.OnDeleteAction;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.dream.app.demo.transferobject.CommentDTO;
+//import com.fasterxml.jackson.annotation.JsonIgnore;
 
 @Entity
 public class Comment {
-
     @Id
     @GeneratedValue
     @Column(name = "Comment_Id", nullable = false)
@@ -25,12 +24,12 @@ public class Comment {
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
     @JoinColumn(name = "Dream_Post_Id", nullable = false)
     @OnDelete(action = OnDeleteAction.CASCADE)
-    @JsonIgnore
+    //@JsonIgnore
     private DreamPost dreamPost;
 
     @ManyToOne(optional = false)
     @JoinColumn(name = "App_User_Id", nullable = false)
-    @JsonIgnore
+    //@JsonIgnore
     private AppUser appUser;
 
     @Column(name = "Created_Date", length = 36, nullable = false)
@@ -76,5 +75,14 @@ public class Comment {
         this.createdDate = createdDate;
     }
 
+    public CommentDTO populateCommentDTO() {
+        CommentDTO commentDTO = new CommentDTO();
+        commentDTO.setAppUser(this.getAppUser());
+        commentDTO.setCommentId(this.getCommentId());
+        commentDTO.setCreatedDate(this.getCreatedDate());
+        commentDTO.setDreamPost(this.getDreamPost());
+        commentDTO.setText(this.getText());
+        return commentDTO;
+    }
 }
 
