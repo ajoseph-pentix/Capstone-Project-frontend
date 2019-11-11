@@ -6,6 +6,9 @@ import com.dream.app.demo.models.AppUser;
 import com.dream.app.demo.models.Comment;
 import com.dream.app.demo.models.DreamPost;
 import com.dream.app.demo.models.Keyword;
+import com.dream.app.demo.transferobject.CommentDTO;
+import com.dream.app.demo.transferobject.DreamPostDTO;
+
 
 
 public interface DreamPostService {

@@ -3,6 +3,7 @@ import java.util.List;
 
 import com.dream.app.demo.models.AppUser;
 import com.dream.app.demo.models.PersonalNote;
+import com.dream.app.demo.transferobject.PersonalNoteDTO;
 
 public interface AppUserService {
 
