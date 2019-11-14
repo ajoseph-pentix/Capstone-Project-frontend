@@ -95,9 +95,9 @@ export default class TheHub extends Component {
                                             </ul>
                                         </nav>
                                         {/* Table */}
-                                        <div className="table-responsive"  style={{height: "45vh"}}>
+                                <div className="table-responsive"  style={{height: "45vh"}}>
                                             
-                                            <table className="table text-light table-hover table-dark table-custom spacing5">
+                                        <table className="table text-light table-hover table-dark table-custom spacing5">
                                                 <thead>
                                                     <th className="text-danger">Lorem ipsum</th>
                                                     <th className="text-danger">Lorem ipsum</th>
@@ -111,7 +111,7 @@ export default class TheHub extends Component {
                                                 </tbody>
                                             </table>
                                             
-                                        </div>
+                                </div>
                                         <nav className="float-right ml-auto mt-3">
                                             <ul className="pagination">
                                                 <li className="page-item">
@@ -132,7 +132,7 @@ export default class TheHub extends Component {
                                             </ul>
                                         </nav>
 
-                                        <div className="table-responsive"  style={{height: "45vh"}}>
+                                <div className="table-responsive"  style={{height: "45vh"}}>
                                         {/* Second table */}
                                         <table className="table text-light table-hover table-dark table-custom spacing5">
                                             <thead>
@@ -148,9 +148,9 @@ export default class TheHub extends Component {
                                             </tbody>
                                         </table>
                                         
-                                    </div>
-                                    
                                 </div>
+                                    
+                            </div>
                             </section>
                         </div>
 
