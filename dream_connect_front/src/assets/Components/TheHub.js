@@ -5,37 +5,92 @@ import Comment from "./Comment"; // Import comment boxes
 import Blog from "../assets/images/blog.jpg";
 import Sunset from "../assets/images/sunset.jpeg";
 import Sunflowers from "../assets/images/sunflowers.jpg";
+import axios from "axios";
 
 
 export default class TheHub extends Component {
 
-  render() {
+  state = {
+    posts: [],
+    searchField: ""
+  }
 
-    let posts = []
+  //as component loads we retrieve posts from the api and save it on component state
+  componentDidMount = () => {
+      console.log("this works");
+      axios.get("http://localhost:8080/admin/getallpost").then(function(data){
+        this.setState({
+          posts: data.data
+        })
+      }).catch((err) => {
+        console.error("Error accessing the server: ", err.message);
+        console.log("Setting dummy data");
+        let dummyDreams = [{
+          "title":"My December Dream1",
+          "description":"Its about december dream",
+          "appUser":{ 
+             "username":"testuserZ",
+          },
+          "createdDate":"2019-11-08T13:39:21.806+0000",
+        }, {
+          "title":"My December Dream2",
+          "description":"Its about december dream",
+          "appUser":{ 
+             "username":"testuserZ",
+          },
+          "createdDate":"2019-11-08T13:39:21.806+0000",
+        }, {
+          "title":"My December Dream3",
+          "description":"Its about december dream",
+          "appUser":{ 
+             "username":"testuserZ",
+          },
+          "createdDate":"2019-11-08T13:39:21.806+0000",
+        }, {
+          "title":"My December Dream4",
+          "description":"Its about december dream",
+          "appUser":{ 
+             "username":"testuserZ",
+          },
+          "createdDate":"2019-11-08T13:39:21.806+0000",
+        }];
+        this.setState({
+          posts: dummyDreams
+        });
+      });
+  }
+
+  retrieveDreams = () => {
+    alert(`retrieving dreams for ${this.state.searchField}...`)
+  }
+
+  render = () => {
+
+    // let posts = []
 
     // Loop for how many posts exists, 
     // with a backend you would determine this by the length of an array
-    for (let i = 0; i < 10; i++) {
+    // for (let i = 0; i < 10; i++) {
 
-        posts.push(
-            <tr key={i}>
-                <td>
-                    <span>Ut enim</span>
-                </td>
-                <td>
-                    <span>minima veniam</span>
-                </td>
-                <td>
-                    <span>quis nostrum</span>
-                </td>
-                <td>
-                    <span>exercitationem</span>
-                </td>
-                {/* Imported for each row, you could pass in props for this to work */}
-                <Comment />
-            </tr>
-        )
-    }
+        // posts.push(
+        //     <tr key={i}>
+        //         <td>
+        //             <span>Ut enim</span>
+        //         </td>
+        //         <td>
+        //             <span>minima veniam</span>
+        //         </td>
+        //         <td>
+        //             <span>quis nostrum</span>
+        //         </td>
+        //         <td>
+        //             <span>exercitationem</span>
+        //         </td>
+        //         {/* Imported for each row, you could pass in props for this to work */}
+        //         <Comment />
+        //     </tr>
+        // )
+    // }
 
     return (
                 <div>
@@ -95,23 +150,23 @@ export default class TheHub extends Component {
                                             </ul>
                                         </nav>
                                         {/* Table */}
-                                <div className="table-responsive"  style={{height: "45vh"}}>
+                                        <div className="table-responsive"  style={{height: "45vh"}}>
                                             
-                                        <table className="table text-light table-hover table-dark table-custom spacing5">
+                                            <table className="table text-light table-hover table-dark table-custom spacing5">
                                                 <thead>
-                                                    <th className="text-danger">Lorem ipsum</th>
-                                                    <th className="text-danger">Lorem ipsum</th>
-                                                    <th className="text-danger">Lorem ipsum</th>
-                                                    <th className="text-danger">Lorem ipsum</th>
+                                                    <th className="text-danger">Title</th>
+                                                    <th className="text-danger">User</th>
+                                                    <th className="text-danger">Description</th>
+                                                    <th className="text-danger">Created</th>
                                                 </thead>
                                                 
                                                 <tbody>
                                                     {/* Results of the above for loop */}
-                                                    {posts}
+
                                                 </tbody>
                                             </table>
                                             
-                                </div>
+                                        </div>
                                         <nav className="float-right ml-auto mt-3">
                                             <ul className="pagination">
                                                 <li className="page-item">
@@ -132,25 +187,51 @@ export default class TheHub extends Component {
                                             </ul>
                                         </nav>
 
-                                <div className="table-responsive"  style={{height: "45vh"}}>
+                                        <div className="table-responsive"  style={{height: "45vh"}}>
                                         {/* Second table */}
                                         <table className="table text-light table-hover table-dark table-custom spacing5">
                                             <thead>
-                                                <th className="text-danger">Lorem ipsum</th>
-                                                <th className="text-danger">Lorem ipsum</th>
-                                                <th className="text-danger">Lorem ipsum</th>
-                                                <th className="text-danger">Lorem ipsum</th>
+                                              <th className="text-danger">Title</th>
+                                              <th className="text-danger">User</th>
+                                              {/* <th className="text-danger">Description</th> */}
+                                              <th className="text-danger">Created</th>
                                             </thead>
                                             
                                             <tbody>
                                                 {/* Results of the above for loop again */}
-                                                {posts}
+                                                    {this.state.posts.map((post, index) => (
+                                           
+                                                      <React.Fragment key={index}>
+                                                        <tr>
+                                                            <td>
+                                                                <span>{post.title}</span>
+                                                            </td>
+                                                            <td>
+                                                                <span>{post.appUser.username}</span>
+                                                            </td>
+                                                            {/* <td>
+                                                                <span>{post.description}</span>
+                                                            </td> */}
+                                                            <td>
+                                                                <span>{new Date(post.createdDate).toLocaleString ()}</span>
+                                                            </td>
+                                                            {/* Imported for each row, you could pass in props for this to work */}
+                                                            <Comment />
+                                                        </tr>
+                                                        <tr>
+                                                          <td colspan="3">
+                                                          {post.description}
+                                                          </td>
+                                                        </tr>
+                                                      </React.Fragment>
+
+                                                    ))}
                                             </tbody>
                                         </table>
                                         
-                                </div>
+                                    </div>
                                     
-                            </div>
+                                </div>
                             </section>
                         </div>
 
@@ -251,8 +332,8 @@ export default class TheHub extends Component {
                                     </div>
  
                                     <form className="col-12 form-group md-form amber-textarea active-amber-textarea-2">
-                                        <input placeholder="DREAM" className="text-light col-6 mx-auto mb-3 float-left mr-auto" />
-                                        <button className="btn btn-outline-primary mx-auto">DREAM WEAVER</button>
+                                        <input onChange={e => this.setState({searchField: e.target.value})} value={this.state.searchField} placeholder="DREAM" className="text-light col-6 mx-auto mb-3 float-left mr-auto" />
+                                        <button type="button" onClick={this.retrieveDreams} className="btn btn-outline-primary mx-auto">DREAM WEAVER</button>
                                     </form>
                                 </div>
                             </aside>
@@ -262,3 +343,4 @@ export default class TheHub extends Component {
                 </div>
         )
     }
+}

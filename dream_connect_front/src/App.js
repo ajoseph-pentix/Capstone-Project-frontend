@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import Header from "./Components/navigation/Header" // Header
+import Header from "./navigation/Header" // Header
 import Footer from "./Components/navigation/Footer" //Footer
 import Sneakers from "./assets/images/ads/sneakers.jpg";
 import Brownies from "./assets/images/ads/brownies.png";

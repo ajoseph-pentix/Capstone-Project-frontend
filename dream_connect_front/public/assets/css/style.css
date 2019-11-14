@@ -1,0 +1,228 @@
+
+html,
+body,
+main {
+
+margin: 0;
+max-width: 100vw !important;
+overflow-x: hidden !important;
+}
+
+/* Required for full background image */
+html,
+body,
+header,
+#intro-section {
+    height: 100%;
+}
+/* Header styles */
+header {
+    position: relative;
+    height: 50vh;
+    min-height: 25rem;
+    width: 100vw;
+    overflow: hidden;
+    
+  }
+/* Video styles within header */
+header video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -3;
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+  }
+  
+  header .container {
+    position: relative;
+    z-index: 0;
+  }
+  
+  header .overlay {
+    z-index: -1;
+    background: linear-gradient(to right, rgba(204, 83, 51, 0.8), rgba(35, 7, 77, 0.7)) !important;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+  }
+
+/* Responsive elements */
+@media (max-width: 740px) {
+    html,
+    body,
+    header,
+    #intro-section {
+        height: 100vh;
+    }
+}
+/* Footer */
+.top-nav-collapse, .page-footer {
+    background: #563e91 !important;
+}
+/* Header */
+.navbar:not(.top-nav-collapse) {
+    position: fixed !important;
+    z-index: 1;
+    padding: 50px;
+    background: linear-gradient(to right, rgba(204, 83, 51, 0.8), rgba(35, 7, 77, 0.7)) !important;
+    width: 100vw;
+    height: 60px;
+}
+/* Responsive nav */
+@media (max-width: 991px) {
+    .navbar:not(.top-nav-collapse) {
+        background: #563e91 !important;
+    }
+}
+/* Colored background */
+.rgba-gradient {
+    background: rgba(35, 7, 77, 0.8);
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, rgba(204, 83, 51, 0.8), rgba(35, 7, 77, 0.8));
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, rgba(204, 83, 51, 0.8), rgba(35, 7, 77, 0.8));
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    z-index: -1;
+}
+
+/* Colored background */
+.hub-gradient {
+    background: rgba(255,78,80,0.8);
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, rgba(249,212,35,1), rgba(255,78,80,1));
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, rgba(249,212,35,1), rgba(255,78,80,1));
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+
+.img-gradient:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+    /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(220, 66, 37, 0.5)), color-stop(100%, rgba(0, 47, 75, 0.5)));
+    /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, rgba(0, 47, 75, 0.5) 0%, rgba(220, 66, 37, 0.5) 100%);
+    /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, rgba(0, 47, 75, 0.5) 0%, rgba(220, 66, 37, 0.5) 100%);
+    /* Opera 11.10+ */
+    /* IE10+ */
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 47, 75, 0.5)), to(rgba(220, 66, 37, 0.5)));
+    background: linear-gradient(to bottom, rgba(0, 47, 75, 0.5) 0%, rgba(220, 66, 37, 0.5) 100%);
+    /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#002f4b', endColorstr='#00000000', GradientType=0);
+    /* IE6-9 */
+}
+
+/* nav bar*/
+.nav-right {
+    padding: 5px 20px;
+    top: 5px;
+    position: fixed !important;
+    z-index: 1 !important;
+    right: 10px !important;
+    text-align: right !important;
+}
+
+/* Login */
+.login {
+    position: absolute;
+    z-index: 1 !important;
+}
+/* Footer */
+.footer {
+
+    bottom: 0;
+    position: relative;
+    width: 100vw;
+    margin-top: 75px;
+    max-height: 150px !important;
+}
+/* Top of footer */
+.footer-top {
+
+    background-color: rgba(204, 83, 51, 0.8) !important;
+}
+
+/* Minimum height for certain sections */
+.banner-view {
+
+    min-height: 90vh;    
+}
+/* Background with image */
+.news-bg {
+
+    background: url("../images/bokeh-bg.jpg") center fixed no-repeat !important;
+}
+/* Overlay background on posting sections */
+.news-card {
+
+    border-radius: 15px;
+    background-color: rgba(0,0,0,0.3);
+}
+/* Home page overlay background */
+.home-card {
+
+    background-color: rgba(0,0,0,0.3);
+}
+/* Overlay background on posting sections */
+.ads-card {
+    width: 100vw !important;
+    background-color: rgba(35, 7, 77, 0.8);
+}
+/* Article image columns on home page */
+.news-img {
+
+    border-radius: 15px;
+    min-height: 225px;
+    max-height: 225px;;
+    width: auto;
+}
+/* Image columns for blogs */
+.blog-img {
+
+    min-height: 175px;
+    max-height: 175px;;
+    width: auto;
+}
+/* Ad columns for blogs */
+.ad-img {
+    border-radius: 15px;
+    min-height: 125px;
+    max-height: 125px;;
+    width: auto;
+}
+
+/* hide scroll bar on message board */
+.table-responsive {
+    -ms-overflow-style: none;  
+    scrollbar-width: none;  
+}
+/* hide scroll bar on message board */
+.table-responsive::-webkit-scrollbar { 
+    display: none;
+}
+/* Avatar height */
+.avatar {
+
+    max-height: 75px;;
+}
+/* Logo height */
+.logo1 {
+
+    border-radius: 15px;
+}

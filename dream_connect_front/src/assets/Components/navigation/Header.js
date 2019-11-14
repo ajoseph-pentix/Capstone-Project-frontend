@@ -5,7 +5,9 @@ import { HashLink as Link } from 'react-router-hash-link'; // Route to id="top"
 export default class Header extends Component {
 
     render() {
+
         return (
+
             <div>
                 {/* <!-- Navbar --> */}
                 <nav className="w-100 header-border navbar navbar-expand-lg navbar-dark scrolling-navbar">

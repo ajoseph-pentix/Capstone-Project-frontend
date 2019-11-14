@@ -1,9 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
+import './index.css'; //Css styles
+import './assets/css/styles.css';
+// Apps imported for routes
 import  {BrowserRouter as Router, Route } from "react-router-dom"; // Routing
 //import {BrowserRouter} from 'react-router-dom';
-import 'semantic-ui-css/semantic.min.css' //library that helps in creation of form components
+//import 'semantic-ui-css/semantic.min.css' //library that helps in creation of form components
 import App from './App';
 import TheHub from './components/TheHub';
 import YourHub from './components/YourHub';
