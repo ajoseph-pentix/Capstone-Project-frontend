@@ -5,14 +5,16 @@ import  {BrowserRouter as Router, Route } from "react-router-dom"; // Routing
 //import {BrowserRouter} from 'react-router-dom';
 import 'semantic-ui-css/semantic.min.css' //library that helps in creation of form components
 import App from './App';
+import TheHub from './components/TheHub';
+import YourHub from './components/YourHub';
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
 
   <Router>
         <Route exact path="/" component={App} />
-        //<Route exact path="/thehub" component={TheHub} />
-        //<Route exact path="/yourhub" component={YourHub} />
+        //<Route exact path="/TheHub" component={TheHub} />
+        //<Route exact path="/ub" component={YourHub} />
 
     </Router>
 
