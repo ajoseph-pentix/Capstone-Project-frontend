@@ -108,7 +108,7 @@ public class AppUserDTO {
 
     public AppUser populateAppUser() {
         AppUser appUser = new AppUser();
-        appUser.setUserId(this.getUserId());
+        appUser.setUserId(getUserId());
         appUser.setFirstName(this.getFirstName());
         appUser.setLastName(this.getLastName());
         appUser.setUsername(this.getUsername());
@@ -118,5 +118,4 @@ public class AppUserDTO {
         appUser.setRole(this.getRole());
         return appUser;
     }
-
 }

@@ -17,7 +17,7 @@ public class Comment {
     private Long commentId;
 
     @NotNull
-    @Lob
+    @Lob  //Allows storage of large data
     @Column(name = "Text", nullable = false)
     private String text;
 
@@ -28,7 +28,7 @@ public class Comment {
     private DreamPost dreamPost;
 
     @ManyToOne(optional = false)
-    @JoinColumn(name = "App_User_Id", nullable = false)
+    @JoinColumn(name = "userId", nullable = false)
     //@JsonIgnore
     private AppUser appUser;
 

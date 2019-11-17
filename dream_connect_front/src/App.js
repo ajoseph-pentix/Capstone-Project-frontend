@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
-import Header from "./navigation/Header" // Header
-import Footer from "./Components/navigation/Footer" //Footer
+import Header from "../navigation/Header" // Header
+import Footer from "../navigation/Footer" //Footer
 import Sneakers from "./assets/images/ads/sneakers.jpg";
 import Brownies from "./assets/images/ads/brownies.png";
 import Eye from "./assets/images/dream-eye.png";
@@ -13,6 +13,7 @@ import Radium, {StyleRoot} from 'radium'; // CSS and styling for fade animations
 import Zoom from 'react-reveal/Zoom'; // Zoom animation
 import Intro from "./assets/images/animation-intro.mp4"; // Intro animations
 import zoomIn from 'react-animations/lib/zoom-in'; // 4 second zoom in/pulse
+//import { zoomIn } from 'react-animations'
 const styles = {
   zoomIn: {
       animation: 'x 4s',

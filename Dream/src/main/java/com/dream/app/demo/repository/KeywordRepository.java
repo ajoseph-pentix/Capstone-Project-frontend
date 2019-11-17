@@ -6,5 +6,5 @@ import org.springframework.data.repository.CrudRepository;
 
 public interface KeywordRepository extends CrudRepository<Keyword, Long> {
 
-    Optional<Keyword> findByName(String name);
-}
+    Optional<Keyword> findByName(String name); // Optional allows for
+}                                           //possibility there may not be matching keyword

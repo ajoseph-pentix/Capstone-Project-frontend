@@ -11,12 +11,12 @@ public class AppUser {
 
     // unique primary key
     @Id
-    @GeneratedValue
-
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     //Specifying mapped column info, putting in specific values
-    @Column(name = "User_Id", nullable = false)
+    @Column(name = "userId", nullable = false)
     private Long userId;
-
+    //setting length as a specific value to avoid errors
+    //associated with unmanageable size
     @Column(name = "username", length = 36, nullable = false)
     private String username;
 
@@ -38,7 +38,8 @@ public class AppUser {
 
     @Column(name = "Role", length = 5, nullable = false)
     private String role;
-
+    //java util has a Date class (setting) which is desirable when viewing
+    //user posts
     @Column(name = "Created_Date", length = 36, nullable = false)
     private Date createdDate;
 

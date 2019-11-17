@@ -15,8 +15,8 @@ public class PersonalNote {
     private String text;
 
     @ManyToOne
-    @JoinColumn(name = "App_User_ID")
-    @JsonIgnore
+    @JoinColumn(name = "userId")
+  //  @JsonIgnore
     private AppUser appUser;
 
     public Long getNoteId() {

@@ -22,7 +22,7 @@ public class DreamPost {
     private String description;
 
     @ManyToOne
-    @JoinColumn(name = "App_User_ID")
+    @JoinColumn(name = "userId")
     private AppUser appUser;
 
     @Column(name = "Created_Date", length = 36, nullable = false)

@@ -1,8 +1,7 @@
 import React, {Component} from 'react';
 import Header from "./navigation/Header";
 import Footer from "./navigation/Footer";
-import Avatar from "../assets/images/avatar.png";
-
+import Avatar from "../images/avatar.png";
 export default class TheHub extends Component {
 
   render() {

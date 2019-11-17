@@ -2,9 +2,9 @@ import React, {Component} from 'react';
 import Header from "./navigation/Header"; // Import header
 import Footer from "./navigation/Footer"; // Import footer
 import Comment from "./Comment"; // Import comment boxes
-import Blog from "../assets/images/blog.jpg";
-import Sunset from "../assets/images/sunset.jpeg";
-import Sunflowers from "../assets/images/sunflowers.jpg";
+import Blog from "/images/blog.jpg";
+import Sunset from "/images/sunset.jpeg";
+import Sunflowers from "/images/sunflowers.jpg";
 import axios from "axios";
 
 

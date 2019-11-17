@@ -17,7 +17,7 @@ public class Keyword {
     private String name;
 
     @ManyToMany(fetch = FetchType.LAZY, mappedBy = "keywords")
-    private Set<DreamPost> dreamPosts = new HashSet<>();
+    private Set<DreamPost> dreamPosts = new HashSet<>(); //
 
     public Long getKeywordId() {
         return keywordId;

@@ -4,8 +4,6 @@ import java.math.BigInteger;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 
-import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
-
 public class PasswordUtil {
 
     public static String encrypt(String input) {
@@ -26,8 +24,9 @@ public class PasswordUtil {
     }
 
     public static String bycrypt(String rawPassword) {
-        String encodedPassword = new BCryptPasswordEncoder().encode(rawPassword);
-        return encodedPassword;
+        //String encodedPassword = new BCryptPasswordEncoder().encode(rawPassword);
+       // return encodedPassword;
+        return "";
     }
 
     public static void main(String[] args) {

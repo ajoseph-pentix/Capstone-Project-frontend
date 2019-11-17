@@ -14,5 +14,6 @@ public interface DreamPostRepository extends CrudRepository<DreamPost, Long> {
     //@Query("FROM Post p WHERE p.person.id= ?1")
     //public Iterable<DreamPost> findAllPostsByAppUser(Long personId);
     List<DreamPost> findByAppUser(AppUser appUser);
-    List<DreamPost> findByKeywords_nameAndAppUser_userIdNot(Keyword keywords_name, Long appUser_userId);
+    //List<DreamPost> findByKeywords_nameAndAppUser_userIdNot(Keyword keywords_name, Long appUser_userId);
+    List<DreamPost> findByKeywordsAndAppUser(Keyword keywords_name, AppUser appUser_userId);
 }

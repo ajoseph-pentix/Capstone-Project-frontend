@@ -5,10 +5,7 @@ import javax.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import com.dream.app.demo.models.AppUser;
 import com.dream.app.demo.service.AppUserService;
@@ -16,11 +13,12 @@ import com.dream.app.demo.transferobject.AppUserDTO;
 
 @RestController
 public class LoginController {
-
+    //We create a Controller for login to facilitate registering and
+    //authenticating a user.
     @Autowired
     private AppUserService appUserService;
 
-    @RequestMapping(value="/register", method = RequestMethod.POST)
+    @PostMapping(value="/register")
     public AppUser register(@RequestBody AppUserDTO appUserDTO) throws Exception {
         AppUser appUser = appUserDTO.populateAppUser();
         appUser = appUserService.registerUser(appUser);

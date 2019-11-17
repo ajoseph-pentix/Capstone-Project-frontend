@@ -23,6 +23,7 @@ public class AppUserController {
     @Autowired
     private AppUserService appUserService;
 
+    //mapping web requests onto handler methods
     @RequestMapping(value="/updateuser", method = RequestMethod.POST)
     public AppUser update(@RequestBody AppUserDTO appUserDTO) throws Exception {
         AppUser appUser = appUserDTO.populateAppUser();
