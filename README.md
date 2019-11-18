@@ -1,5 +1,13 @@
 # Capstone_Project
 
+![DreamConnect](https://user-images.githubusercontent.com/54553156/69097277-3acf8380-0a24-11ea-8971-3e3d20a331ca.png)
+
+
+
+
+
+
+
 
 For my final project, I chose to create an app called DreamConnect, a simple tool that would allow people to discuss, share and find a new way of exploring their dreams.  I wanted to create something engaging and useful but also something different and new, even if only a minimal novelty.  I began thinking about dream apps that I’ve used and also others widely available to consumers and imagined what I could add to the standard fray: most dream apps provide an interpretation service as the main function.  On a simple level, this could be an API call to a digital library of symbols.  
 
