@@ -95,16 +95,27 @@ FUNCTIONS OF DREAMCONNECT
 
 User registration.
 User Login
+
 Google authentication login
+
 User can create posts
+
 User can delete posts
+
 User can comment on posts
+
 User can delete comments
+
 User can find dream matches with DreamWeaver button
+
 User can write a personal note
+
 User can save a personal note
+
 Delete a personal note
+
 Update password
+
 Retrieve list of all posts, previous keywords used, and previous dream matches.
 
 
