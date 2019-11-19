@@ -55,13 +55,17 @@ A user typing in “teeth” may get this response:
 
 Request: 
 [
-"teeth"]
+
+"teeth"
+]
 
 Response:
 [
-   {
-"title":"My chipped teeth",
-"description":"Last night I dreamt I chipped two of my teeth while biting into a piece of ice…"}
+ {
+ 
+"title" : "My chipped teeth",
+
+"description" : "Last night I dreamt I chipped two of my teeth while biting into a piece of ice…"}
 ]
 
 
@@ -93,7 +97,8 @@ But most important, I created something that is both unique and colorful and als
 FUNCTIONS OF DREAMCONNECT
 (TESTED IN POSTMAN)
 
-User registration.
+User registration
+
 User Login
 
 Google authentication login
@@ -117,6 +122,8 @@ Delete a personal note
 Update password
 
 Retrieve list of all posts, previous keywords used, and previous dream matches.
+
+
 
 
 DESCRIPTION OF DREAMCONNECT BY PAGE
