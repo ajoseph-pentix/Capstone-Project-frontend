@@ -11,6 +11,7 @@
 
 
 
+
 For my final project, I chose to create an app called DreamConnect, a simple tool that would allow people to discuss, share and find a new way of exploring their dreams.  I wanted to create something engaging and useful but also something different and new, even if only a minimal novelty.  I began thinking about dream apps that I’ve used and also others widely available to consumers and imagined what I could add to the standard fray: most dream apps provide an interpretation service as the main function.  On a simple level, this could be an API call to a digital library of symbols.  
 
 I wondered, for this assignment, if a dream app could be more than just a dream dictionary.
@@ -42,7 +43,8 @@ And how could User A then store this information about the dream match to contin
 
 
 
-For further details and consideration of my planning process, follow this link:
+For further details and consideration of my planning process, follow this link: https://tinyurl.com/s4g3qav
+
 
 
 KEY CONCEPT/ MAIN ATTRACTION
@@ -57,16 +59,20 @@ Request:
 [
 
 "teeth"
+
 ]
 
 Response:
 [
+
  {
  
 "title" : "My chipped teeth",
 
 "description" : "Last night I dreamt I chipped two of my teeth while biting into a piece of ice…"}
+
 ]
+
 
 
 
@@ -79,6 +85,8 @@ I had worked on Post/Comment type blogs before but my project was the most consu
 I garnered a purview of the various roles existing within the software programmer moniker, and the whole process of taking an idea from conceptualization, to coding, to testing and then deployment. It did not feel natural for one person to be performing all these tasks but I understood the reasons why such a project had been instilled upon us.  I gained a newfound understanding of the collaborative effort that must go in to realizing program deliverable goals.
 
 As a one-manned ship, I spent a lot of time learning from You-tube and speaking to people I’d met at tech meet-ups.  It was imperative that I find these additional resources if I wanted to complete the project to my utmost satisfaction.  I really wanted to render something polished.
+
+
 
 TRIUMPHS
 
@@ -93,9 +101,11 @@ Embracing the power of YouTube, resources from tech meetups and online forums, I
 But most important, I created something that is both unique and colorful and also useful, something that I want to continue to make grow and function.  There is still work to be done on it.  I understand it as a tool to help people store and build upon manifestations of their subconscious.  Just like I, as a web developer, will pursue building and accomplishing the full deployment of DreamConnect, my conscious creation.
 
 
+
  
 FUNCTIONS OF DREAMCONNECT
 (TESTED IN POSTMAN)
+
 
 User registration
 
@@ -122,6 +132,8 @@ Delete a personal note
 Update password
 
 Retrieve list of all posts, previous keywords used, and previous dream matches.
+
+
 
 
 
